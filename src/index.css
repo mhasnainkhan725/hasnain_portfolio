@@ -256,7 +256,7 @@ a { text-decoration: none; color: inherit; }
 .social-btn.phone:hover { background: var(--phone-color); color: white; border-color: var(--phone-color); transform: translateY(-2px); }
 
 /* Hero Visual - Stats Grid */
-.hero-visual { position: relative; }
+.hero-visual { position: relative; margin-top: 60px; }
 .hero-image-wrapper { position: relative; }
 .hero-visual-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
