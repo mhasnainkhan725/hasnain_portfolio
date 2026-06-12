@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaEye, FaExternalLinkAlt, FaTree, FaHeartbeat, FaUsersCog, FaChartLine, FaBolt, FaChartPie, FaGamepad, FaGlobe, FaTimes } from 'react-icons/fa';
-import A_png from '../assets/A.png';
-import B_png from '../assets/B.png';
+import Picture1_png from '../assets/Picture1.png';
+import Picture2_png from '../assets/Picture2.png';
 import ecoDrivePdf from '../assets/Eco_Drive_Motors Report.pdf';
+import F_png from '../assets/F.png';
+import G_png from '../assets/G.png';
+import H_png from '../assets/H.png';
+import I_png from '../assets/I.png';
+import J_png from '../assets/J.png';
+import thesisPdf from '../assets/MPHILL THESIS (HASNAIN ABBAS  2023-MSDS-15).pdf';
 
 interface Project {
   id: string;
@@ -59,7 +65,7 @@ const projects: Project[] = [
       'Enhanced TCO Dashboard – Add maintenance + resale value to boost EV value proposition'
     ],
     businessImpact: '“The Power BI dashboards transformed raw sales data into a clear strategic map… aligning profitability with regulatory mandates.”',
-    images: [A_png, B_png],
+    images: [Picture1_png, Picture2_png],
     pdfUrl: ecoDrivePdf,
   },
   {
@@ -81,6 +87,8 @@ const projects: Project[] = [
       'Feature engineering on environmental factors',
     ],
     demoUrl: '#',
+    images: [F_png, G_png, H_png, I_png, J_png],
+    pdfUrl: thesisPdf,
   },
   {
     id: 'stroke',
