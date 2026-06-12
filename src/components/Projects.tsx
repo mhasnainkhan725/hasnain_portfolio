@@ -29,6 +29,11 @@ import retail14_png from '../assets/14.png';
 import retail15_png from '../assets/15.png';
 import retail16_png from '../assets/16.png';
 import retailPdf from '../assets/Exploring Retail Trends.pdf';
+import cross21_png from '../assets/21.png';
+import cross22_png from '../assets/22.png';
+import cross23_png from '../assets/23.png';
+import cross24_png from '../assets/24.png';
+import crossPdf from '../assets/Analysis of Healthcare, Employment, and Educational Data.pdf';
 
 interface Project {
   id: string;
@@ -52,6 +57,42 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: 'cross-domain-analytics',
+    title: 'Cross-Domain Analytics: Unpacking Healthcare Utilization, Salary Geography, Trial Biases, and Economic Indicators',
+    subtitle: 'Data Analyst & Data Scientist',
+    description: 'Visualized four independent datasets to uncover patterns, biases, and actionable truths in healthcare, education, clinical trials, and economics.',
+    category: 'stats',
+    tags: ['Statistical Testing', 'Data Visualization', 'Python'],
+    techStack: ['Python', 'Matplotlib', 'Seaborn', 'Statistical Testing'],
+    icon: <FaGlobe />,
+    iconBg: 'web-bg',
+    previewDetails: [
+      'Analyzed hospital bed occupancy',
+      'Evaluated global graduate salaries',
+      'Assessed clinical trial bias',
+      'Correlated economic indicators'
+    ],
+    demoUrl: '#',
+    problemContext: "Four independent datasets across critical sectors required visualization-driven insights: hospital bed occupancy (5,840 records), global graduate salaries (111 graduates, 5 majors, multiple regions), clinical trial bias (249 participants, 47% completion), and economic correlation (27 US cities). The goal was to move beyond raw numbers to uncover patterns, biases, and actionable truths.",
+    contribution: "Designed box plots, scatter plots, and histograms; performed statistical significance testing (p-values, correlation, R²); identified three major research biases (selection, survivor, Simpson’s paradox); delivered practical recommendations for hospital management, career planning, research quality, and economic policy.",
+    keyInsights: [
+      { metric: "Hospital Bed Occupancy", finding: "Weekends are 5.14% higher than weekdays (80.11% vs 74.97%, p < 0.001) – statistically significant & operationally critical" },
+      { metric: "Graduate Salaries", finding: "Information Systems highest pay; Accounting lowest. North America & Europe > Africa & South America" },
+      { metric: "Clinical Trial Bias", finding: "Only 47% completion rate → severe survivor bias. Reported 3.2 kg/m² BMI reduction likely overestimated" },
+      { metric: "Unemployment vs Loan Delinquency", finding: "Weak correlation (r = 0.357, R² = 0.1277, p = 0.067 not significant) – other factors matter more" },
+      { metric: "Cross-Domain Insight", finding: "Statistical significance ≠ practical importance. Visualization reveals what numbers hide" }
+    ],
+    recommendations: [
+      "Healthcare: Add 5% weekend capacity (beds + staff) and implement flexible staffing models",
+      "Career & Education: Prioritize Information Systems or Finance majors; target North America or Europe",
+      "Clinical Research Quality: Always report dropout rates and test for Simpson’s paradox",
+      "Economic Policy: Use composite indicators instead of relying solely on unemployment for loan default prediction"
+    ],
+    businessImpact: "“Statistical significance doesn't always mean practical importance. Visualization reveals patterns not obvious in raw data. Bias analysis is essential for valid conclusions.”",
+    images: [cross21_png, cross22_png, cross23_png, cross24_png],
+    pdfUrl: crossPdf,
+  },
   {
     id: 'walmart-retail',
     title: 'Beyond the Holiday Spike: A Data-Driven Retail Strategy for Walmart-Style Superstores',
