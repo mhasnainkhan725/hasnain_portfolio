@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaEye, FaExternalLinkAlt, FaTree, FaHeartbeat, FaUsersCog, FaChartLine, FaBolt, FaChartPie, FaGamepad, FaGlobe, FaTimes } from 'react-icons/fa';
+import A_png from '../assets/A.png';
+import B_png from '../assets/B.png';
+import ecoDrivePdf from '../assets/Eco_Drive_Motors Report.pdf';
 
 interface Project {
   id: string;
@@ -14,9 +17,51 @@ interface Project {
   iconBg: string;
   previewDetails: string[];
   demoUrl: string;
+  problemContext?: string;
+  contribution?: string;
+  keyInsights?: { metric: string; finding: string }[];
+  recommendations?: string[];
+  businessImpact?: string;
+  images?: string[];
+  pdfUrl?: string;
 }
 
 const projects: Project[] = [
+  {
+    id: 'eco-drive',
+    title: 'Bridging the EV Gap: Roadmap to UK’s 2030 Ban for Eco Drive Motors',
+    subtitle: 'Data Analyst & Data Scientist',
+    description: 'Designed interactive Power BI dashboards to analyze sales, sustainability, and pricing to navigate the UK’s 2030 ICE ban.',
+    category: 'viz',
+    tags: ['Power BI', 'KPI Dashboards', 'TCO Analysis'],
+    techStack: ['Power BI', 'Customer Segmentation', 'TCO Analysis'],
+    icon: <FaChartPie />,
+    iconBg: 'sales-bg',
+    previewDetails: [
+      'Power BI dashboards for sales & sustainability',
+      'Customer Segmentation & TCO Analysis',
+      'Phased ICE Decline Plan formulation',
+    ],
+    demoUrl: '#',
+    problemContext: 'Eco Drive Motors (UK) must transition from petrol/diesel to electric vehicles (EVs) ahead of the government’s 2030 ban on new ICE vehicles. The company needed to understand its current position, revenue dynamics, and customer behavior to pivot profitably.',
+    contribution: 'Designed two interactive Power BI dashboards to analyze sales, sustainability progress, pricing, and customer loyalty. Defined and tracked 4 strategic KPIs.',
+    keyInsights: [
+      { metric: 'EV Market Share', finding: 'Only 18.45% of sales (Q4 2023) – far below 2030 readiness' },
+      { metric: 'Sales Mix', finding: 'Petrol dominates at 61.69%, Diesel at 19.86%' },
+      { metric: 'Revenue per Unit', finding: 'EVs have the highest avg. selling price (£32.54K overall)' },
+      { metric: 'Customer Concentration', finding: 'Top 10 customers bought 8,942 units – significant loyalty & risk' },
+      { metric: 'Sustainability Paradox', finding: 'EV volume is lowest, but revenue per EV is highest' },
+    ],
+    recommendations: [
+      'Fleet-First EV Program – Convert top 10 B2B clients to EVs with TCO-based deals',
+      'Targeted EV Incentives – Subsidized charging, warranties, finance (no direct price cuts)',
+      'Phased ICE Decline Plan – Align inventory & marketing with declining petrol/diesel',
+      'Enhanced TCO Dashboard – Add maintenance + resale value to boost EV value proposition'
+    ],
+    businessImpact: '“The Power BI dashboards transformed raw sales data into a clear strategic map… aligning profitability with regulatory mandates.”',
+    images: [A_png, B_png],
+    pdfUrl: ecoDrivePdf,
+  },
   {
     id: 'thesis',
     title: 'Environmental Flood Prediction Model',
@@ -319,6 +364,65 @@ const Projects = () => {
                     ))}
                   </ul>
                 </div>
+                {previewProject.problemContext && (
+                  <div className="modal-details">
+                    <h4>Problem Context</h4>
+                    <p className="modal-desc" style={{textAlign: 'left', marginBottom: '16px'}}>{previewProject.problemContext}</p>
+                  </div>
+                )}
+                {previewProject.contribution && (
+                  <div className="modal-details">
+                    <h4>My Contribution</h4>
+                    <p className="modal-desc" style={{textAlign: 'left', marginBottom: '16px'}}>{previewProject.contribution}</p>
+                  </div>
+                )}
+                {previewProject.keyInsights && (
+                  <div className="modal-details">
+                    <h4>Key Insights</h4>
+                    <div style={{overflowX: 'auto'}}>
+                      <table style={{width: '100%', textAlign: 'left', borderCollapse: 'collapse', marginBottom: '16px'}}>
+                        <thead>
+                          <tr style={{borderBottom: '1px solid var(--border-color)'}}>
+                            <th style={{padding: '10px 8px', color: 'var(--accent-light)', whiteSpace: 'nowrap'}}>Metric</th>
+                            <th style={{padding: '10px 8px', color: 'var(--accent-light)'}}>Finding</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {previewProject.keyInsights.map((insight, i) => (
+                            <tr key={i} style={{borderBottom: '1px solid var(--border-color)'}}>
+                              <td style={{padding: '10px 8px', color: 'var(--text-secondary)', whiteSpace: 'nowrap'}}><strong>{insight.metric}</strong></td>
+                              <td style={{padding: '10px 8px', color: 'var(--text-secondary)'}}>{insight.finding}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
+                {previewProject.recommendations && (
+                  <div className="modal-details">
+                    <h4>Strategic Recommendations</h4>
+                    <ul>
+                      {previewProject.recommendations.map((rec, i) => (
+                        <li key={i}>{rec}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {previewProject.businessImpact && (
+                  <div className="modal-details">
+                    <h4>Business Impact</h4>
+                    <p className="modal-desc" style={{textAlign: 'left', fontStyle: 'italic', marginBottom: '16px', borderLeft: '4px solid var(--accent)', paddingLeft: '12px'}}>{previewProject.businessImpact}</p>
+                  </div>
+                )}
+                {previewProject.images && previewProject.images.length > 0 && (
+                  <div className="modal-details">
+                    <h4>Dashboards / Previews</h4>
+                    {previewProject.images.map((img, i) => (
+                      <img key={i} src={img} alt={`Preview ${i+1}`} style={{width: '100%', borderRadius: '8px', marginBottom: '16px', border: '1px solid var(--border-color)'}} />
+                    ))}
+                  </div>
+                )}
                 <div className="modal-tech">
                   <h4>Technologies</h4>
                   <div className="modal-tech-tags">
@@ -328,6 +432,11 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="modal-actions">
+                  {previewProject.pdfUrl && (
+                    <a href={previewProject.pdfUrl} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                      <FaExternalLinkAlt /> View Full Report
+                    </a>
+                  )}
                   <button className="btn btn-primary" onClick={() => setPreviewProject(null)}>
                     Close
                   </button>
