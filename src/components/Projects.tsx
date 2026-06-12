@@ -15,6 +15,13 @@ import H_png from '../assets/H.png';
 import I_png from '../assets/I.png';
 import J_png from '../assets/J.png';
 import thesisPdf from '../assets/MPHILL THESIS (HASNAIN ABBAS  2023-MSDS-15).pdf';
+import netflix1_png from '../assets/1.png';
+import netflix2_png from '../assets/2.png';
+import netflix3_png from '../assets/3.png';
+import netflix4_png from '../assets/4.png';
+import netflix5_png from '../assets/5.png';
+import netflix6_png from '../assets/6.png';
+import netflixPdf from '../assets/Netflix Global Content.pdf';
 
 interface Project {
   id: string;
@@ -38,6 +45,43 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: 'netflix-unscripted',
+    title: 'Netflix Unscripted: A Data Visualization Deep Dive into Global Content Strategy',
+    subtitle: 'Data Analyst & Data Scientist',
+    description: 'Designed advanced visualizations to analyze Netflix\'s global acquisition and production strategy across 8,800+ titles spanning 96 years.',
+    category: 'viz',
+    tags: ['Python', 'Matplotlib', 'Seaborn', 'Statistical Analysis'],
+    techStack: ['Python', 'Kaggle Dataset', 'Correlation', 'Distribution'],
+    icon: <FaChartLine />,
+    iconBg: 'stroke-bg',
+    previewDetails: [
+      'Designed six advanced visualizations',
+      'Analyzed 8,800+ titles across 112 countries',
+      'Identified three distinct strategic phases',
+      'Geographic and temporal trend analysis'
+    ],
+    demoUrl: '#',
+    problemContext: "Netflix operates in over 112 countries with 8,800+ titles spanning 42 genres and 96 years. The goal was to uncover how content trends (temporal, geographic, duration, ratings) shape Netflix's global acquisition and production strategy.",
+    contribution: "Designed six advanced visualizations (line chart, bar chart, scatter plot, box plot, heatmap, histogram) to answer four strategic sub-questions. Identified three distinct strategic phases and actionable insights for content investment.",
+    keyInsights: [
+      { metric: "Temporal Strategy", finding: "Three phases: Establishment (2008–14), Aggressive Expansion (2015–19: ~2,000 titles in 2019), Quality Optimization (2020–21)" },
+      { metric: "Geographic Concentration", finding: "US dominates (35% of all titles), India second (12%). Top 15 countries = 75% of content" },
+      { metric: "Duration vs. Year", finding: "Moderate negative correlation (-0.21) – newer content is shorter (mobile viewing habits)" },
+      { metric: "Duration by Rating", finding: "TV-MA has widest range & most outliers; family content is tightly distributed" },
+      { metric: "Overall Length Pattern", finding: "Right-skewed distribution, peak at 90–100 minutes (standard feature film)" }
+    ],
+    recommendations: [
+      "Prioritize shorter-form content for mobile-first audiences (confirmed by -0.21 correlation)",
+      "Double down on top 15 production countries – they already deliver 75% of value",
+      "Use TV-MA flexibility to experiment with non-standard runtimes for adult audiences",
+      "Shift from volume to premium quality – post-2020 trend supports higher ROI per title",
+      "Build interactive dashboards for real-time acquisition decisions (future opportunity)"
+    ],
+    businessImpact: "“Data-driven content acquisition, mobile-first content strategy, strategic market targeting, investment optimization.”",
+    images: [netflix1_png, netflix2_png, netflix3_png, netflix4_png, netflix5_png, netflix6_png],
+    pdfUrl: netflixPdf,
+  },
   {
     id: 'eco-drive',
     title: 'Bridging the EV Gap: Roadmap to UK’s 2030 Ban for Eco Drive Motors',
