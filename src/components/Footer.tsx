@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             <div className="footer-social">
               <a href="https://www.linkedin.com/in/m-hasnain-abbas-khan-0063a71a3" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
-              <a href="mailto:mhasnainkhan725@gmail.com" aria-label="Email"><FaEnvelope /></a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mhasnainkhan725@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><FaEnvelope /></a>
               <a href="https://wa.me/923081837095" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp /></a>
               <a href="tel:+923081837095" aria-label="Phone"><FaPhone /></a>
             </div>

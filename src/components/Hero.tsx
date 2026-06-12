@@ -74,7 +74,7 @@ const Hero = () => {
             <a href="https://www.linkedin.com/in/m-hasnain-abbas-khan-0063a71a3" target="_blank" rel="noopener noreferrer" className="social-btn linkedin">
               <FaLinkedinIn /><span>LinkedIn</span>
             </a>
-            <a href="mailto:mhasnainkhan725@gmail.com" className="social-btn email">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mhasnainkhan725@gmail.com" target="_blank" rel="noopener noreferrer" className="social-btn email">
               <FaEnvelope /><span>Email</span>
             </a>
             <a href="https://wa.me/923081837095" target="_blank" rel="noopener noreferrer" className="social-btn whatsapp">

@@ -143,7 +143,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <div className="detail-item"><FaMapMarkerAlt /><span>Rawalpindi, Pakistan</span></div>
-              <div className="detail-item"><FaEnvelope /><span>mhasnainkhan725@gmail.com</span></div>
+              <div className="detail-item"><FaEnvelope /><a href="https://mail.google.com/mail/?view=cm&fs=1&to=mhasnainkhan725@gmail.com" target="_blank" rel="noopener noreferrer">mhasnainkhan725@gmail.com</a></div>
               <div className="detail-item"><FaPhone /><span>+92 308 1837095</span></div>
               <div className="detail-item"><FaAward /><span>Gold Medalist - BS CS</span></div>
             </motion.div>

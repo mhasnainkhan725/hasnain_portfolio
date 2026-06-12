@@ -8,7 +8,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoLink = `mailto:mhasnainkhan725@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=mhasnainkhan725@gmail.com&su=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
     window.open(mailtoLink);
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
@@ -52,7 +52,7 @@ const Contact = () => {
             <p>I'm currently seeking full-time Data Analyst/Data Scientist opportunities. Whether you have a question or just want to say hi, I'll do my best to get back to you!</p>
 
             <div className="contact-details">
-              <a href="mailto:mhasnainkhan725@gmail.com" className="contact-card">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mhasnainkhan725@gmail.com" target="_blank" rel="noopener noreferrer" className="contact-card">
                 <div className="contact-card-icon email-icon"><FaEnvelope /></div>
                 <div className="contact-card-info">
                   <span className="contact-label">Email</span>
