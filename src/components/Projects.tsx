@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaEye, FaExternalLinkAlt, FaTree, FaHeartbeat, FaUsersCog, FaChartLine, FaBolt, FaChartPie, FaGamepad, FaGlobe, FaTimes } from 'react-icons/fa';
+import A_png from '../assets/A.png';
+import B_png from '../assets/B.png';
+import C_png from '../assets/C.png';
+import D_png from '../assets/D.png';
+import E_png from '../assets/E.png';
 import Picture1_png from '../assets/Picture1.png';
 import Picture2_png from '../assets/Picture2.png';
 import ecoDrivePdf from '../assets/Eco_Drive_Motors Report.pdf';
@@ -87,7 +92,7 @@ const projects: Project[] = [
       'Feature engineering on environmental factors',
     ],
     demoUrl: '#',
-    images: [F_png, G_png, H_png, I_png, J_png],
+    images: [A_png, B_png, C_png, D_png, E_png, F_png, G_png, H_png, I_png, J_png],
     pdfUrl: thesisPdf,
   },
   {
