@@ -22,6 +22,13 @@ import netflix4_png from '../assets/4.png';
 import netflix5_png from '../assets/5.png';
 import netflix6_png from '../assets/6.png';
 import netflixPdf from '../assets/Netflix Global Content.pdf';
+import retail11_png from '../assets/11.png';
+import retail12_png from '../assets/12.png';
+import retail13_png from '../assets/13.png';
+import retail14_png from '../assets/14.png';
+import retail15_png from '../assets/15.png';
+import retail16_png from '../assets/16.png';
+import retailPdf from '../assets/Exploring Retail Trends.pdf';
 
 interface Project {
   id: string;
@@ -45,6 +52,43 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: 'walmart-retail',
+    title: 'Beyond the Holiday Spike: A Data-Driven Retail Strategy for Walmart-Style Superstores',
+    subtitle: 'Data Analyst & Data Scientist',
+    description: 'Analyzed 600,000+ sales records across 45 stores to uncover seasonal patterns, departmental performance concentration, and economic sensitivity.',
+    category: 'stats',
+    tags: ['Time Series', 'Retail Analytics', 'Python'],
+    techStack: ['Python', 'Time-Series', 'Correlation', 'Distribution Fitting'],
+    icon: <FaChartLine />,
+    iconBg: 'forecast-bg',
+    previewDetails: [
+      'Designed six complementary visualizations',
+      'Analyzed 600,000+ weekly sales records',
+      'Uncovered temporal and macroeconomic drivers',
+      'Distribution fitting with histograms & box plots'
+    ],
+    demoUrl: '#',
+    problemContext: "A large retail chain (600,000+ sales records across 45 stores, 99 departments, weekly time-series over 3 years) needed to understand seasonal patterns, departmental performance concentration, and economic sensitivity to optimize inventory, staffing, and strategic focus.",
+    contribution: "Designed six complementary visualizations (line chart, bar chart, scatter plot, correlation heatmap, box plot, histogram) to uncover temporal, hierarchical, and macroeconomic drivers of sales performance.",
+    keyInsights: [
+      { metric: "Seasonal Impact", finding: "Holiday periods drive 60–100% sales boost (peak >8M vs baseline 4–5M)" },
+      { metric: "Departmental Concentration", finding: "Top 3 departments (92, 95, 38) generate 40% of total revenue – high concentration risk" },
+      { metric: "Economic Sensitivity", finding: "Fuel price vs sales correlation = -0.12 (negligible). Walmart is recession-resilient" },
+      { metric: "Performance Variability", finding: "Most departments: $50K–$100K/week. Top outliers: $400K–$700K/week (rare but profitable)" },
+      { metric: "Distribution Shape", finding: "Right-skewed long tail – many mid-tier departments have significant upside potential" }
+    ],
+    recommendations: [
+      "Seasonal Inventory Optimization – Pre-position stock for 60–100% holiday multipliers; align staffing & marketing",
+      "Middle-Tier Department Focus – 96 departments have 20–30% improvement potential → $2–4B additional revenue",
+      "Replicate Top-Performer Excellence – Study departments 92, 95, 38; transfer operational practices to others",
+      "Leverage Economic Resilience – Prioritize internal operations (not macro fears) as competitive advantage",
+      "Predictive Inventory Management – Use seasonal cyclicality to automate reorder points"
+    ],
+    businessImpact: "“Predictive inventory management capabilities, strategic resource allocation optimization, competitive advantage through advanced analytics.”",
+    images: [retail11_png, retail12_png, retail13_png, retail14_png, retail15_png, retail16_png],
+    pdfUrl: retailPdf,
+  },
   {
     id: 'netflix-unscripted',
     title: 'Netflix Unscripted: A Data Visualization Deep Dive into Global Content Strategy',
